@@ -1,0 +1,15 @@
+.sketchfab-embed-wrapper {
+  /* You can add styles specific to the wrapper here if needed */
+}
+
+.embed-credit {
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px;
+  color: #4A4A4A;
+}
+
+.bold-link {
+  font-weight: bold;
+  color: #1CAAD9;
+}
