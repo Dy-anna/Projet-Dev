@@ -9,6 +9,7 @@
 	--lightpink: #FFB6C1;  
 	--black: #000000;
 	--white: #FFFFFF;
+	--Or: #EDC967;
 	--box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-	background-color: var(--white);
+	background-image: url('C:/xampp/htdocs/girlys_perfums/composant/bg.jpg');
 	width: 100%;
 }
 
@@ -174,7 +175,7 @@ header {
 	z-index: 101;
 	transition: .3s;
 	box-shadow: var(--box-shadow);
-	background-color: var(--white);
+	background-color: var(--Or);
 }
 
 header.scrolled {
@@ -187,6 +188,7 @@ header.scrolled a:hover {
 }
 
 .flex {
+	background-color: var(--Or);
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -203,7 +205,7 @@ header.scrolled a:hover {
 }
 
 .navbar a:hover {
-	color: var(--lightpink); 
+	color: var(--white); 
 }
 
 .header .icons {
@@ -259,44 +261,198 @@ header.scrolled a:hover {
 }
 
 .flex img {
-	max-width: 100px;
+	max-width: 90px;
 	height: auto;
 }
+.newsletter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+}
 
+.newsletter-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.newsletter-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.newsletter-content i {
+	margin-right: 20px;
+}
+.newsletter-content p {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.newsletter-content a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.newsletter-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.newsletter-form form {
+    width: 100%;
+}
+
+.newsletter-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+.newsletter-form p {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.newsletter-form p span {
+    color: #e60000;
+}
+footer{
+	width: 100%;
+}
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    color: var(--black);
+}
+
+footer .img-box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer .inner-footer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: start;
+    gap: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+footer .inner-footer .card {
+    margin: .5rem;
+}
+
+footer .inner-footer .card h3 {
+    margin-bottom: 1rem;
+}
+
+footer .inner-footer .card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .inner-footer .card li {
+    cursor: pointer;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #555;
+}
+
+footer .inner-footer .card li:hover {
+    color: var(--black);
+}
+
+footer .inner-footer .card p {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    color: #555;
+}
+footer .inner-footer .card .social-links {
+    margin-top: 1rem;
+}
+footer .bottom-footer {
+    text-transform: capitalize;
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
 @media (max-width: 991px) {
-	#menu-btn {
-		display: block;
+    #menu-btn {
+        display: block;
+    }
+
+    .header .flex .navbar {
+        position: relative;
+        width: 100%;
+        padding: 0 2rem;
+        top: 130%;
+        left: 0;
+        display: block;
+        right: 0;
+        border-top: 1px solid var(--pink);
+        background: var(--Or);
+        transition: .3s ease;
+        clip-path: polygon(0 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+    .header.hidden {
+    top: -100px;
+    transition: top 0.3s;
 	}
 
-	.header .flex .navbar {
-		position: absolute;
-		width: 100%;
-		padding: 0 2rem;
-		top: 130%;
-		left: 0;
-		display: block;
-		right: 0;
-		border-top: 1px solid var(--pink);
-		background: var(--white);
-		transition: .3s ease;
-		clip-path: polygon(0 0, 100% 0, 0 0);
-	}
+    .form-container {
+        width: 100%;
+    }
 
-
-	.header .flex .navbar.active {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-
-	.header .flex .navbar a {
-		display: block;
-		margin: 2rem;
-	}
-
-	.form-container {
-		width: 100%;
-	}
-
-	form {
-		width: 100%;
-	}
+    form {
+        width: 100%;
+    }
 }
