@@ -12,8 +12,11 @@ include 'C:\xampp\htdocs\girlys_perfums\composant\connect.php';
 </head>
 <body>
 	<?php include 'C:\xampp\htdocs\girlys_perfums\composant\header.php'; ?>
+	<div class="main">
+		<?php include "C:/xampp/htdocs/girlys_perfums/composant/footer.php" ?>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 	<script src="script.js"></script>
-	<?php include 'C:\xampp\htdocs\girlys_perfums\composant\alert.php'; ?>
+	<?php include 'C:/xampp/htdocs/girlys_perfums/composant/alert.php'; ?>
 </body>
 </html>
